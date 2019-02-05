@@ -25,15 +25,14 @@ body {
 }
 
 .container {
-    max-width: 1600px;
+    width: 1600px;
     padding: 50px 50px 0px 50px;
     margin: 0 auto;
 }
 
 .container_pd-160 {
-    max-width: 1600px;
-    padding: 160px;
-    width: 100%;
+    width: 1600px;
+    padding: 0 160px;
 }
 
 .screen {
@@ -417,3 +416,106 @@ body {
         }
     }
 }
+
+.mb70 {
+    margin-bottom: 70px;
+}
+
+.third-screen {
+    flex-direction: column;
+}
+
+.tabs-nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: 45px;
+    &-item {
+        font-family: Proxima Nova Semibold;
+        line-height: normal;
+        font-size: 24px;
+        color: #000000;
+        margin-right: 70px;
+        cursor: pointer;
+        &.active {
+            color: #3968AC;
+            border-bottom: 1px solid #3968AC;
+        }
+    }
+}
+
+.tabs-list {
+    height: 400px;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    background: linear-gradient(90deg, #D5F7FF, #D5F7FF 50%, #E3EFFF 50%, #E3EFFF 100%);
+    &-item {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        height: 100%;
+        &-side {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            &:last-child {
+                padding: 0 0 0 30px;
+            }
+        }
+        &-text {
+            display: flex;
+            flex-direction: column;
+            &__head {
+                font-family: Proxima Nova Bold;
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            &__descr {
+                font-family: Proxima Nova;
+                font-size: 18px;
+                color: #000000;
+                margin-bottom: 20px;
+            }
+        }
+        &-img {
+            width: 405px;
+            height: 257px;
+            &-devices{
+                position: relative;
+                &-mob {
+                    position: relative;
+                }
+                &-desctop {
+                    position: relative;
+                    z-index: 1;
+                    width: 405px;
+                    height: 257px;
+                }
+            }
+        }
+    }
+}
+
+.mockup-desctop {
+    &-top {
+        position: absolute;
+        top: 0;
+        left: 10px;
+    }
+    &-right {
+        position: absolute;
+        top: 34px;
+        right: 32px;
+    }
+    &-bottom {
+        position: absolute;
+        bottom: -52px;
+        left: -26px;
+    }
+    &-left {
+        position: absolute;
+        top: 34px;
+        left: -2px;
+    }
+}
+
