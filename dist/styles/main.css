@@ -430,7 +430,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.3s ease-in-out; }
+  transition: 0.3s ease-in-out;
+  cursor: pointer; }
   .link-feedback:hover {
     background: #3968AC;
     color: #FFF; }
@@ -883,7 +884,8 @@ body {
   display: flex;
   flex-direction: column; }
   .slider-card-img {
-    height: 210px; }
+    height: 210px;
+    position: relative; }
     .slider-card-img-wrapper {
       position: relative;
       height: 210px;
@@ -906,15 +908,27 @@ body {
       transition: 1s ease-in-out; }
   .slider-card-text {
     padding: 15px 20px;
-    flex: 1;
+    flex: 0 1 110px;
     text-overflow: ellipsis;
     font-family: Proxima Nova;
     line-height: 24px;
     font-size: 16px;
-    color: #222328; }
+    color: #222328;
+    display: none;
+    overflow: hidden;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical; }
+    .slider-card-text.active {
+      display: -webkit-box !important; }
   .slider-card-footer {
     padding: 15px 20px;
     border-top: 1px solid #F0F2F7; }
+    .slider-card-footer .timestamp-wrapper {
+      overflow: hidden;
+      white-space: nowrap;
+      display: none; }
+      .slider-card-footer .timestamp-wrapper.active {
+        display: block; }
   .slider-card-2 {
     width: 570px;
     height: 270px;
@@ -931,7 +945,19 @@ body {
       flex-direction: column; }
     .slider-card-2-side_img {
       flex: 0 1 185px;
-      width: 185px; }
+      width: 185px;
+      overflow: hidden;
+      position: relative; }
+      .slider-card-2-side_img img {
+        width: 100%;
+        height: 100%; }
+      .slider-card-2-side_img .slider-card-2-side-img-wrapper {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0; }
+        .slider-card-2-side_img .slider-card-2-side-img-wrapper.active {
+          display: block; }
     .slider-card-2-side-head {
       font-family: Proxima Nova;
       line-height: 15px;
@@ -939,13 +965,37 @@ body {
       letter-spacing: 1.2px;
       color: #B9BED1;
       text-transform: uppercase;
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      flex: 0 1 15px;
+      overflow: hidden; }
+      .slider-card-2-side-head-track {
+        transition: 1s ease-in-out; }
     .slider-card-2-side-text {
       font-family: Proxima Nova;
       line-height: 28px;
       font-size: 20px;
       color: #222328;
-      flex: 1; }
+      flex: 0 1 140px;
+      height: 140px; }
+      .slider-card-2-side-text-wrapper {
+        display: none;
+        overflow: hidden;
+        height: 140px;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical; }
+        .slider-card-2-side-text-wrapper.active {
+          display: -webkit-box !important; }
+    .slider-card-2-side-footer {
+      flex: 0 1 15px;
+      display: block;
+      align-items: center;
+      margin-top: auto; }
+      .slider-card-2-side-footer .timestamp-wrapper {
+        display: none;
+        overflow: hidden;
+        white-space: nowrap; }
+        .slider-card-2-side-footer .timestamp-wrapper.active {
+          display: block; }
   .slider-card-3 {
     width: 270px;
     flex: 0 1 270px;
@@ -960,23 +1010,31 @@ body {
       flex-direction: column;
       padding: 30px 25px; }
     .slider-card-3-text {
-      flex: 1;
+      flex: 0 1 256px;
       font-family: Proxima Nova;
       line-height: 28px;
       font-size: 20px;
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      height: 277px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 9;
+      -webkit-box-orient: vertical; }
     .slider-card-3-author {
       display: flex;
       align-items: center;
       font-family: Proxima Nova;
       line-height: 18px;
       font-size: 14px;
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      margin-top: auto; }
       .slider-card-3-author img {
         width: 33px;
         height: 33px;
         margin-right: 10px;
         border-radius: 50%; }
+    .slider-card-3-track {
+      transition: 1s ease-in-out; }
 
 .timestamp {
   color: #B9BED1;
@@ -1010,5 +1068,139 @@ body {
     align-self: stretch; }
     .slider-nav-bot__arrow {
       cursor: pointer; }
+
+.partners-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.form {
+  display: flex;
+  align-items: stretch;
+  height: 421px; }
+  .form-main {
+    flex: 1; }
+    .form-main-progress {
+      height: 50px;
+      margin-bottom: 46px; }
+      .form-main-progress-step {
+        font-family: Proxima Nova;
+        line-height: normal;
+        font-size: 18px;
+        color: #000000;
+        margin-bottom: 15px; }
+      .form-main-progress-bar {
+        border: 1px solid #BABABA;
+        box-sizing: border-box;
+        border-radius: 15px;
+        height: 12px;
+        width: 206px;
+        transition: 1s ease-in-out;
+        background: linear-gradient(90deg, #3968AC 0%, #3968AC 20%, transparent 20%, transparent 100%); }
+    .form-main-contain {
+      display: none;
+      height: 100%; }
+      .form-main-contain.active {
+        display: block; }
+      .form-main-contain-wrapper {
+        width: 600px;
+        height: 322px; }
+      .form-main-contain-flexwrapper {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        height: 100%; }
+      .form-main-contain-item {
+        flex: 0 1 126px;
+        padding: 20px;
+        margin-right: 50px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out; }
+        .form-main-contain-item.active {
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+        .form-main-contain-item:nth-child(3n) {
+          margin-right: 0px; }
+        .form-main-contain-item:nth-child(-n+3) {
+          margin-bottom: 30px; }
+        .form-main-contain-item__img {
+          margin-bottom: 30px; }
+      .form-main-contain-form {
+        width: 100%;
+        height: 100%; }
+        .form-main-contain-form-row {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 30px; }
+          .form-main-contain-form-row:last-child {
+            margin-bottom: 0px; }
+          .form-main-contain-form-row .link-feedback {
+            border: 1px solid #3968AC;
+            box-shadow: 0px 20px 40px rgba(184, 191, 211, 0.6);
+            border-radius: 5px;
+            background: transparent;
+            outline: none;
+            color: #3968AC; }
+            .form-main-contain-form-row .link-feedback input[type="file"] {
+              display: none; }
+            .form-main-contain-form-row .link-feedback.hover {
+              background: #3968AC;
+              color: #FFF; }
+        .form-main-contain-form-input {
+          flex: 0 1 49%; }
+          .form-main-contain-form-input__input {
+            width: 100%;
+            background: #FFFFFF;
+            border: 1px solid #B8B8B8;
+            box-sizing: border-box;
+            border-radius: 5px;
+            padding: 15px 20px;
+            outline: none; }
+            .form-main-contain-form-input__input::placeholder {
+              font-family: Proxima Nova;
+              line-height: 15px;
+              font-size: 12px;
+              color: #A1A6BB; }
+          .form-main-contain-form-input__placeholder {
+            font-family: Proxima Nova;
+            line-height: 15px;
+            font-size: 14px;
+            color: #747474;
+            margin: 0 0 10px 20px; }
+          .form-main-contain-form-input_full {
+            flex: 1; }
+          .form-main-contain-form-input__textarea {
+            width: 100%;
+            background: #FFFFFF;
+            border: 1px solid #B8B8B8;
+            box-sizing: border-box;
+            border-radius: 5px;
+            padding: 15px 20px;
+            outline: none;
+            height: 120px;
+            resize: none; }
+            .form-main-contain-form-input__textarea::placeholder {
+              font-family: Proxima Nova;
+              line-height: 15px;
+              font-size: 12px;
+              color: #A1A6BB; }
+  .form-list {
+    flex: 0 1 300px;
+    padding-left: 150px;
+    border-left: 1px solid #CFCFCF; }
+    .form-list-head {
+      font-family: Proxima Nova Semibold;
+      line-height: normal;
+      font-size: 18px;
+      color: #000000;
+      margin-bottom: 75px; }
+    .form-list-item {
+      font-family: Proxima Nova Light;
+      margin-bottom: 40px;
+      font-size: 18px;
+      color: #000000;
+      cursor: pointer; }
+      .form-list-item.active {
+        font-family: Proxima Nova Semibold; }
 
 /*# sourceMappingURL=maps/main.css.map */

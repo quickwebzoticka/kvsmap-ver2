@@ -402,37 +402,133 @@ block contain
 							.slider-card-img
 								.slider-card-img__tooltip Cайты
 								img(src="img/slider-1-1.png")
-					.slider-card-text Тут будет краткое описание новости
+					.slider-card-text.active Тут будет краткое описание новости
+					.slider-card-text Тут будет краткое описание второй новости
+					.slider-card-text Тут будет краткое описание третьей новости
+					.slider-card-text 
+						| Тут будет краткое описание четвертой новости.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quos, ipsam vitae quasi hic, laborum dolorum similique veniam porro voluptatem.
 					.slider-card-footer
-						.timestamp
-							<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="#B9BED1"/>
-							</svg>
-							| 15 минут назад
+						.timestamp-wrapper.active
+							.timestamp
+								<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="#B9BED1"/>
+								</svg>
+								| 15 минут назад
+						.timestamp-wrapper
+							.timestamp
+								<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="#B9BED1"/>
+								</svg>
+								| 28 дней назад
+						.timestamp-wrapper
+							.timestamp
+								<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="#B9BED1"/>
+								</svg>
+								| 28 недель назад
+						.timestamp-wrapper
+							.timestamp
+								<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="#B9BED1"/>
+								</svg>
+								| 28 лет назад
 				.slider-card-2
 					.slider-card-2-side.slider-card-2-side_text
-						.slider-card-2-side-head USER EXPERIENCE DESIGN
-						.slider-card-2-side-text Здесь идет текст выводмой новости
-						.timestamp
-							<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="#B9BED1"/>
-							</svg>
-							| 15 минут назад
+						.slider-card-2-side-head
+							.slider-card-2-side-head-track(style="transform: translateY(0)")
+								.slider-card-2-side-head-wrapper.active
+									| USER EXPERIENCE DESIGN
+								.slider-card-2-side-head-wrapper
+									| USER INTERFACE DESIGN
+								.slider-card-2-side-head-wrapper
+									| WEB DEVELOPMENT
+								.slider-card-2-side-head-wrapper
+									| ILYUSHIN'S CODE
+						.slider-card-2-side-text
+							.slider-card-2-side-text-wrapper.active Здесь идет текст выводмой новости
+							.slider-card-2-side-text-wrapper Здесь идет текст выводмой новости Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam asperiores dolorem velit. Asperiores recusandae voluptate excepturi laudantium molestiae ab, distinctio.
+							.slider-card-2-side-text-wrapper Здесь идет текст выводмой новости Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, culpa.
+							.slider-card-2-side-text-wrapper Здесь идет текст выводмой новости Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat labore eaque eveniet ab necessitatibus accusantium architecto tempora delectus temporibus, quas accusamus amet tenetur earum totam quos at aperiam dicta, similique.
+						.slider-card-2-side-footer
+							.timestamp-wrapper.active
+								.timestamp
+									<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="#B9BED1"/>
+									</svg>
+									| 15 минут назад
+							.timestamp-wrapper
+								.timestamp
+									<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="#B9BED1"/>
+									</svg>
+									| 28 дней назад
+							.timestamp-wrapper
+								.timestamp
+									<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="#B9BED1"/>
+									</svg>
+									| 28 недель назад
+							.timestamp-wrapper
+								.timestamp
+									<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="#B9BED1"/>
+									</svg>
+									| 28 лет назад
 					.slider-card-2-side.slider-card-2-side_img
+						.slider-card-2-side-img-wrapper.active
+							.slider-card-2-side-img
+								img(src="img/slider-2-1.png")
+						.slider-card-2-side-img-wrapper
+							.slider-card-2-side-img
+								img(src="img/slider-1-1.png")
+						.slider-card-2-side-img-wrapper
+							.slider-card-2-side-img
+								img(src="img/slider-2-1.png")
 						.slider-card-2-side-img-wrapper
 							.slider-card-2-side-img
 								img(src="img/slider-2-1.png")
 				.slider-card-3
-					.slider-card-3-item.active
-						.timestamp.timestamp_white
-							<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="white"/>
-							</svg>
-							| 3 Января 2018 года
-						.slider-card-3-text А тут у нас тоже идет текст новости или ее заголовок
-						.slider-card-3-author
-							img(src="img/slider-author.png")
-							| Tony Hawk
+					.slider-card-3-track(style="transform: translateY(0)")
+						.slider-card-3-item.active
+							.timestamp.timestamp_white
+								<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="white"/>
+								</svg>
+								| 3 Января 2018 года
+							.slider-card-3-text А тут у нас тоже идет текст новости или ее заголовок
+							.slider-card-3-author
+								img(src="img/slider-author.png")
+								| Tony Hawk
+						.slider-card-3-item
+							.timestamp.timestamp_white
+								<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="white"/>
+								</svg>
+								| 3 Января 2018 года
+							.slider-card-3-text А тут у нас тоже идет текст новости или ее заголовок А тут у нас тоже идет текст новости или ее заголовокА тут у нас тоже идет текст новости или ее заголовокА тут у нас тоже идет текст новости или ее заголовок
+							.slider-card-3-author
+								img(src="img/slider-author.png")
+								| Tony Hawk
+						.slider-card-3-item
+							.timestamp.timestamp_white
+								<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="white"/>
+								</svg>
+								| 3 Января 2018 года
+							.slider-card-3-text А тут у нас тоже идет текст новости или ее заголовок А тут у нас тоже идет текст новости или ее заголовок
+							.slider-card-3-author
+								img(src="img/slider-author.png")
+								| Tony Hawk
+						.slider-card-3-item
+							.timestamp.timestamp_white
+								<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="white"/>
+								</svg>
+								| 3 Января 2018 года
+							.slider-card-3-text А тут у нас тоже идет текст новости или ее заголовок А тут у нас тоже идет текст новости или ее заголовок А тут у нас тоже идет текст новости или ее заголовок А тут у нас тоже идет текст новости или ее заголовок
+							.slider-card-3-author
+								img(src="img/slider-author.png")
+								| Tony Hawk
 				.slider-nav
 					.slider-nav-top
 						a.link-feedback(href="#") Все новости
@@ -447,6 +543,144 @@ block contain
 							<svg width="106" height="8" viewBox="0 0 106 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M105.354 4.35355C105.549 4.15829 105.549 3.84171 105.354 3.64645L102.172 0.464466C101.976 0.269204 101.66 0.269204 101.464 0.464466C101.269 0.659728 101.269 0.976311 101.464 1.17157L104.293 4L101.464 6.82843C101.269 7.02369 101.269 7.34027 101.464 7.53553C101.66 7.7308 101.976 7.7308 102.172 7.53553L105.354 4.35355ZM0 4.5H105V3.5H0V4.5Z" fill="#777777"/>
 							</svg>
-						
+	.screen.six-screen
+		.container_pd-160
+			.head-text С кем работаем
+			.partners-wrapper
+				.partners-row
+					.partners-item 
+						img(src="img/partners/Ресурс 1.png", alt="")
+					.partners-item 
+						img(src="img/partners/Ресурс 2.png", alt="")
+					.partners-item 
+						img(src="img/partners/Ресурс 3.png", alt="")
+					.partners-item 
+						img(src="img/partners/Ресурс 4.png", alt="")
+					.partners-item 
+						img(src="img/partners/Ресурс 5.png", alt="")
+				.partners-row
+					.partners-item 
+						img(src="img/partners/Ресурс 6.png", alt="")
+					.partners-item 
+						img(src="img/partners/Ресурс 7.png", alt="")
+					.partners-item 
+						img(src="img/partners/Ресурс 8.png", alt="")
+					.partners-item 
+						img(src="img/partners/Ресурс 9.png", alt="")
+					.partners-item 
+						img(src="img/partners/Ресурс 10.png", alt="")
+				.partners-row
+					.partners-item 
+						img(src="img/partners/Ресурс 11.png", alt="")
+					.partners-item 
+						img(src="img/partners/Ресурс 12.png", alt="")
+					.partners-item 
+						img(src="img/partners/Ресурс 13.png", alt="")
+					.partners-item 
+						img(src="img/partners/Ресурс 14.png", alt="")
+					.partners-item 
+						img(src="img/partners/Ресурс 15.png", alt="")
+	.screen.seven-screen
+		.container_pd-160
+			.head-text Выберите тип Вашего проекта
+			.form
+				.form-main
+					.form-main-progress
+						.form-main-progress-step
+							| Шаг <span class="form-main-progress-step__count">1</span> из 5
+						.form-main-progress-bar
+					.form-main-contain-wrapper
+						.form-main-contain.active
+							.form-main-contain-flexwrapper
+								.form-main-contain-item
+									.form-main-contain-item__img
+										img(src="img/icons/form/1-1.png")
+									.form-main-contain-item__text Электронная коммерция
+								.form-main-contain-item
+									.form-main-contain-item__img
+										img(src="img/icons/form/1-2.png")
+									.form-main-contain-item__text Корпоративный портал
+								.form-main-contain-item
+									.form-main-contain-item__img
+										img(src="img/icons/form/1-3.png")
+									.form-main-contain-item__text Уникальный проект
+								.form-main-contain-item
+									.form-main-contain-item__img
+										img(src="img/icons/form/1-4.png")
+									.form-main-contain-item__text Посадочная страница
+								.form-main-contain-item
+									.form-main-contain-item__img
+										img(src="img/icons/form/1-5.png")
+									.form-main-contain-item__text Интернет каталог
+								.form-main-contain-item
+									.form-main-contain-item__img
+										img(src="img/icons/form/1-6.png")
+									.form-main-contain-item__text Промо сайт
+						.form-main-contain
+							.form-main-contain-flexwrapper
+								.form-main-contain-item
+									.form-main-contain-item__img
+										img(src="img/icons/form/2-1.png")
+									.form-main-contain-item__text 1С-Битрикс
+								.form-main-contain-item
+									.form-main-contain-item__img
+										img(src="img/icons/form/2-2.png")
+									.form-main-contain-item__text UMI.CMS
+								.form-main-contain-item
+									.form-main-contain-item__img
+										img(src="img/icons/form/2-3.png")
+									.form-main-contain-item__text MODX
+						.form-main-contain
+							.form-main-contain-flexwrapper
+								.form-main-contain-item
+									.form-main-contain-item__img
+										img(src="img/icons/form/3-1.png")
+									.form-main-contain-item__text Новый проект
+								.form-main-contain-item
+									.form-main-contain-item__img
+										img(src="img/icons/form/3-2.png")
+									.form-main-contain-item__text Существующий
+						.form-main-contain
+							.form-main-contain-flexwrapper
+								.form-main-contain-item
+									.form-main-contain-item__img
+										img(src="img/icons/form/4-1.png")
+									.form-main-contain-item__text Срочно
+								.form-main-contain-item
+									.form-main-contain-item__img
+										img(src="img/icons/form/4-2.png")
+									.form-main-contain-item__text В течение недели
+								.form-main-contain-item
+									.form-main-contain-item__img
+										img(src="img/icons/form/4-3.png")
+									.form-main-contain-item__text В течение месяца
+						.form-main-contain
+							.form-main-contain-form
+								.form-main-contain-form-row
+									label.form-main-contain-form-input
+										.form-main-contain-form-input__placeholder Имя
+										input(type="text", placeholder="Имя").form-main-contain-form-input__input
+									label.form-main-contain-form-input
+										.form-main-contain-form-input__placeholder E-mail
+										input(type="text", placeholder="Введите e-mail").form-main-contain-form-input__input
+								.form-main-contain-form-row
+									label.form-main-contain-form-input.form-main-contain-form-input_full
+										.form-main-contain-form-input__placeholder Сообщение
+										textarea(placeholder="Введите сообщение").form-main-contain-form-input__textarea
+								.form-main-contain-form-row
+									input(type="submit" value="Отправить").link-feedback.hover
+									label.link-feedback
+										| Выберите файл
+										input(type="file" value="Выберите файл")
+
+				.form-list
+					.form-list-head Ваш проект
+					.form-list-item.active Тип
+					.form-list-item Платформа
+					.form-list-item(style="pointer-events: none") Состояние
+					.form-list-item(style="pointer-events: none") Старт
+					.form-list-item(style="pointer-events: none") Ваши контакты
+
+
 
 
