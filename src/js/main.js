@@ -1,5 +1,24 @@
 $(document).ready(function(){
 
+	$.scrollify({
+	    section : ".screen",
+	    sectionName : "section-name",
+	    interstitialSection : "",
+	    easing: "easeOutExpo",
+	    scrollSpeed: 1100,
+	    offset : 0,
+	    scrollbars: true,
+	    standardScrollElements: "",
+	    setHeights: true,
+	    overflowScroll: true,
+	    updateHash: true,
+	    touchScroll:true,
+	    before:function() {},
+	    after:function() {},
+	    afterResize:function() {},
+	    afterRender:function() {}
+	  });
+
 	$(document).on('click', '.pagination-item:not(.active)', function() {
 		$(this).addClass('active').siblings().removeClass('active');
 	});
@@ -11,6 +30,8 @@ $(document).ready(function(){
 			$('.header-menu').removeClass('active');
 			$('.header-wrapper .link-tel').fadeIn(300);
 			$('.header-wrapper .link-feedback').fadeIn(300);
+			$.scrollify.enable();
+			$('html, body').css('overflow', 'auto');
 			return false;
 		}
 		
@@ -18,7 +39,8 @@ $(document).ready(function(){
 		$('.header-menu').addClass('active');
 		$('.header-wrapper .link-tel').fadeOut(300);
 		$('.header-wrapper .link-feedback').fadeOut(300);
-
+		$('html, body').css('overflow', 'hidden');
+		$.scrollify.disable();
 	});
 
 	//Функция автоматичесокй прокрутки
@@ -33,8 +55,14 @@ $(document).ready(function(){
 		function stop(){
 			el.stop();
 		};
-		el.on('mouseenter', stop);
-		el.on('mouseleave', anim);
+		el.on('mouseenter', function(){
+			stop();
+			$.scrollify.disable();
+		});
+		el.on('mouseleave', function(){
+			anim();
+			$.scrollify.enable();
+		});
 		anim();
 	};
 
@@ -169,9 +197,6 @@ $(document).ready(function(){
 
 		temp3 = temp3.replace('(', '').replace(')', '').replace('-', '').split(', ');
 		temp3 = -(parseInt(temp3[temp3.length - 1])) + 400;
-
-		console.log(temp1);
-		console.log(temp);
 
 		if (temp > 0) {
 			$('.slider-nav-bot__arrow_prev, .slider-nav-bot__arrow_next').css('pointer-events', 'auto');

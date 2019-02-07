@@ -14,6 +14,7 @@ body {
 
 .wrapper {
     overflow: hidden;
+    width: 100vw;
 }
 
 .header {
@@ -25,13 +26,13 @@ body {
 }
 
 .container {
-    width: 1600px;
+    width: 1580px;
     padding: 50px 50px 0px 50px;
     margin: 0 auto;
 }
 
 .container_pd-160 {
-    width: 1600px;
+    width: 1580px;
     padding: 0 160px;
 }
 
