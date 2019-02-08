@@ -8,13 +8,14 @@ html(lang="en")
 		link(rel="stylesheet" href="../styles/main.css")
 		block title
 	body
-		include components/header.pug
-		include components/pagination.pug
-		include components/socials.pug
+		.wrapper
+			include components/header.pug
+			include components/pagination.pug
+			include components/socials.pug
 
-		block contain
+			block contain
 
-		include components/footer.pug
+			include components/footer.pug
 
 		script(src="../js/jquery.min.js")
 		script(src="../js/jquery.scrollify.js")

@@ -277,4 +277,21 @@ $(document).ready(function(){
 		$('.form-main-progress-step__count').text(a);
 		$('.form-main-progress-bar').css('background', 'linear-gradient(90deg, #3968AC 0%, #3968AC ' + (20*a) + '%, transparent ' + (20*a) + '%, transparent 100%)')
 	};
+
+	$(document).on('change', 'input[type="file"]', function() {
+		let temp = $(this).val();
+
+		temp = temp.split("\\");
+
+		temp = temp[temp.length-1];
+
+		$('.input-file-label').text(temp);
+	});
+
+	$(document).on('click', '.pagination-item', function(e){
+		e.preventDefault();
+		let temp = $(this).attr('href');
+		console.log(temp);
+		$.scrollify.move('#{temp}');
+	})
 });

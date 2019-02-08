@@ -667,11 +667,14 @@ block contain
 									label.form-main-contain-form-input.form-main-contain-form-input_full
 										.form-main-contain-form-input__placeholder Сообщение
 										textarea(placeholder="Введите сообщение").form-main-contain-form-input__textarea
-								.form-main-contain-form-row
+								.form-main-contain-form-row.form-main-contain-form-row_flex-start
 									input(type="submit" value="Отправить").link-feedback.hover
-									label.link-feedback
-										| Выберите файл
-										input(type="file" value="Выберите файл")
+									.input-file-wrapper
+										label.link-feedback
+											| Выберите файл
+											input(type="file" value="Выберите файл")
+										.input-file-label
+											
 
 				.form-list
 					.form-list-head Ваш проект

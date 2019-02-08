@@ -8,8 +8,11 @@ h1, h2, h3, h4, p {
     margin: 0;
 }
 
-body {
+html, body {
     font-family: 'Proxima Nova';
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .wrapper {
@@ -23,6 +26,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    width: 100vw;
 }
 
 .container {
@@ -96,6 +100,9 @@ body {
     &:hover {
         background: #3968AC;
         color: #FFF;
+    }
+    &:active {
+        box-shadow: inset 0px 3px 7px #000;
     }
 }
 
@@ -954,22 +961,38 @@ body {
                     align-items: center;
                     justify-content: space-between;
                     margin-bottom: 30px;
+                    &_flex-start {
+                        align-items: flex-start; 
+                    }
                     &:last-child {
                         margin-bottom: 0px;
                     }
                     .link-feedback {
                         border: 1px solid #3968AC;
-                        box-shadow: 0px 20px 40px rgba(184, 191, 211, 0.6);
                         border-radius: 5px;
                         background: transparent;
                         outline: none;
                         color: #3968AC;
+                        transition: 0.3s ease-in-out;
+                        &:hover {
+                            box-shadow: 0px 20px 40px rgba(184, 191, 211, 0.6);
+                        }
+                        &:active {
+                            box-shadow: inset 0px 3px 7px #000;
+                        }
                         input[type="file"] {
                             display: none;
                         }
                         &.hover {
                             background: #3968AC;
                             color: #FFF;
+                            transition: 0.3s ease-in-out;
+                            &:hover {
+                                box-shadow: 0px 20px 40px rgba(184, 191, 211, 0.6);
+                            }
+                            &:active {
+                                box-shadow: inset 0px 3px 7px #000;
+                            }
                         }
                     }
                 }
@@ -1043,4 +1066,17 @@ body {
             }
         }
     }
+}
+
+.input-file-label {
+    width: 145px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: Proxima Nova;
+    line-height: 15px;
+    font-size: 12px;
+    color: #A1A6BB;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
