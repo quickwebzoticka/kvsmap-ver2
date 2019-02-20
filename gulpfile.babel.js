@@ -35,7 +35,7 @@ const production = !!argv.production;
 const paths = {
 	src: {
 		pug: [
-			"./src/views/**/index.pug",
+			"./src/views/pages/*.pug",
 			"!./src/views/components/*.pug"
 		],
 		styles: "./src/styles/**/main.scss",
@@ -47,7 +47,8 @@ const paths = {
 			"!./src/img/icons/favicon.{jpg,jpeg,png,gif}"
 		],
 		sprites: "./src/img/icons/svg/*.svg",
-		server_config: "./src/.htaccess"
+		server_config: "./src/.htaccess",
+		fonts: "./src/fonts/**/*"
 	},
 	build: {
 		clean: ["./dist/*", "./dist/.*"],
@@ -57,6 +58,7 @@ const paths = {
 		favicons: "./dist/img/favicons/",
 		images: "./dist/img/",
 		sprites: "./dist/img/sprites/",
+		fonts: "./dist/fonts/"
 	}
 };
 
@@ -93,7 +95,7 @@ export const serverConfig = () => src(paths.src.server_config)
 export const pugToHTML = () => src(paths.src.pug)
 	.pipe(pug({pretty: true}))
 	.pipe(gulpif(production, replace("main.css", "main.min.css")))
-	.pipe(gulpif(production, replace("main.js", "main.min.js")))
+	.pipe(gulpif(production, replace("main.js", "main.js")))
 	.pipe(dest(paths.build.general))
 	.on("end", browsersync.reload);
 
@@ -132,24 +134,12 @@ export const styles = () => src(paths.src.styles)
 	}))
 	.on("end", browsersync.reload);
 
-export const scripts = () => browserify({
-		entries: "./src/js/main.js",
-		debug: true
-	})
-	.bundle()
-	.pipe(source("main.js"))
-	.pipe(buffer())
-	.pipe(gulpif(!production, sourcemaps.init()))
-	.pipe(babel())
-	.pipe(gulpif(production, uglify()))
-	.pipe(gulpif(production, rename({
-		suffix: ".min"
-	})))
-	.pipe(gulpif(!production, sourcemaps.write("./maps/")))
+export const scripts = () => src(paths.src.scripts)
 	.pipe(dest(paths.build.scripts))
-	.pipe(debug({
-		"title": "JS files"
-	}))
+	.on("end", browsersync.reload);
+
+export const fonts = () => src(paths.src.fonts)
+	.pipe(dest(paths.build.fonts))
 	.on("end", browsersync.reload);
 
 export const images = () => src(paths.src.images)
@@ -228,9 +218,9 @@ export const favs = () => src(paths.src.favicons)
 		"title": "Favicons"
 	}));
 
-export const development = series(cleanFiles, sprites, svg2png, parallel(pugToHTML, styles, scripts, images, favs),
+export const development = series(cleanFiles, fonts, sprites, svg2png, parallel(pugToHTML, styles, scripts, images, favs),
 	parallel(watchCode, server));
 
-export const prod = series(cleanFiles, sprites, svg2png, serverConfig, pugToHTML, styles, scripts, images, favs);
+export const prod = series(cleanFiles, fonts, sprites, svg2png, serverConfig, pugToHTML, styles, scripts, images, favs);
 
 export default development;

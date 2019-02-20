@@ -914,8 +914,12 @@ html, body {
                 border-radius: 15px;
                 height: 12px;
                 width: 206px;
-                transition: 1s ease-in-out;
-                background: linear-gradient(90deg, #3968AC 0%, #3968AC 20%, transparent 20%, transparent 100%);
+                overflow: hidden;
+                &__line {
+                    height: 100%;
+                    background: #3968AC;
+                    transition: 1s ease-in-out;
+                }
             }
         }
         &-contain {

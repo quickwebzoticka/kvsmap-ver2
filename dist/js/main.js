@@ -13,17 +13,33 @@ $(document).ready(function(){
 	    overflowScroll: true,
 	    updateHash: true,
 	    touchScroll:true,
-	    before:function() {},
+	    before:function(index, sections) {
+	    	//Переключение активной пагинации
+	    	let a = sections[index];
+	    	let aHref = a[0].id;
+
+	    	$(`[href="#${aHref}"]`).addClass('active').siblings().removeClass('active');
+	    },
 	    after:function() {},
 	    afterResize:function() {},
 	    afterRender:function() {}
 	  });
 
-	$(document).on('click', '.pagination-item:not(.active)', function() {
+
+	//переход между секциями по клику пагинации
+	$(document).on('click', '.pagination-item:not(.active)', function(e) {
+		e.preventDefault();
+		$.scrollify.disable();
 		$(this).addClass('active').siblings().removeClass('active');
+		let temp = $(this).attr('href');
+		let itemOffset = $(temp).offset().top;
+
+		$('html, body').animate({scrollTop: itemOffset}, 1100, 'swing', function(){
+			$.scrollify.enable();
+		});
 	});
 
-
+	//Клик по бургеру, открытиее меню
 	$(document).on('click', '.burger', function(){
 		if ($(this).hasClass('active')) {
 			$(this).removeClass('active');
@@ -73,6 +89,7 @@ $(document).ready(function(){
 		temp.find('img').ready(autScrollSiteView(temp));
 	});
 
+	//Переключение табов и запуск автоматической прокрутки
 	$(document).on('click', '.tabs-nav-item:not(.active)', function(){
 		$(this).addClass('active').siblings().removeClass('active');
 
@@ -85,6 +102,8 @@ $(document).ready(function(){
 		});
 	});
 
+
+	//Переключение табов с выбором направления разработки
 	$(document).on('click', '.ways-dev-list-t1 .ways-dev-list-item:not(.active)', function(){
 		$(this).addClass('active').siblings().removeClass('active');
 
@@ -95,6 +114,7 @@ $(document).ready(function(){
 		$('.ways-dev-list-t2 .ways-dev-list-item').removeClass('active');
 	});
 
+	//переключение вложенного таба с выбором направления разработки
 	$(document).on('click', '.ways-dev-list-t2 .ways-dev-list-item:not(.active)', function(){
 		$(this).addClass('active').siblings().removeClass('active');
 
@@ -103,6 +123,8 @@ $(document).ready(function(){
 		$('.ways-dev-img').removeClass('active').eq($(this).index()).addClass('active');
 	});
 
+
+	//Логика слайдера
 	$(document).on('click', '.slider-nav-bot__arrow_next', function(){
 		$('.slider-nav-bot__arrow_prev, .slider-nav-bot__arrow_next').css('pointer-events', 'none'); //Отключение активности стрелки
 
@@ -178,6 +200,8 @@ $(document).ready(function(){
 		}, 1000);
 	});
 
+
+	//логика слайдера
 	$(document).on('click', '.slider-nav-bot__arrow_prev', function(){
 		$('.slider-nav-bot__arrow_prev, .slider-nav-bot__arrow_next').css('pointer-events', 'none'); //Отключение активности стрелки
 
@@ -253,6 +277,7 @@ $(document).ready(function(){
 		}, 1000);
 	});
 
+	//переключение табов в форме
 	$(document).on('click', '.form-main-contain-item', function(){
 		$(this).addClass('active').siblings().removeClass('active');
 	});
@@ -273,11 +298,13 @@ $(document).ready(function(){
 		progressBarSteps(a);
 	});
 
+	//Функция прогресс-бара
 	function progressBarSteps(a) {
 		$('.form-main-progress-step__count').text(a);
-		$('.form-main-progress-bar').css('background', 'linear-gradient(90deg, #3968AC 0%, #3968AC ' + (20*a) + '%, transparent ' + (20*a) + '%, transparent 100%)')
+		$('.form-main-progress-bar__line').css(`width`, `${a*20}%`);
 	};
 
+	//Добавление наименования загружаемого файла
 	$(document).on('change', 'input[type="file"]', function() {
 		let temp = $(this).val();
 
@@ -287,11 +314,4 @@ $(document).ready(function(){
 
 		$('.input-file-label').text(temp);
 	});
-
-	$(document).on('click', '.pagination-item', function(e){
-		e.preventDefault();
-		let temp = $(this).attr('href');
-		console.log(temp);
-		$.scrollify.move('#{temp}');
-	})
 });
