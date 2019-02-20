@@ -33,9 +33,11 @@ $(document).ready(function(){
 		$(this).addClass('active').siblings().removeClass('active');
 		let temp = $(this).attr('href');
 		let itemOffset = $(temp).offset().top;
-
+		
+		$('.pagination-item').css('pointer-events', 'none');
 		$('html, body').animate({scrollTop: itemOffset}, 1100, 'swing', function(){
 			$.scrollify.enable();
+			$('.pagination-item').css('pointer-events', 'auto');
 		});
 	});
 
