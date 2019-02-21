@@ -34,10 +34,10 @@ $(document).ready(function(){
 		let temp = $(this).attr('href');
 		let itemOffset = $(temp).offset().top;
 
-		$('.pagination-item').css('pointer-events', 'none');
+		// $('.pagination-item').css('pointer-events', 'none');
 		$('html, body').animate({scrollTop: itemOffset}, 1100, 'swing', function(){
 			$.scrollify.enable();
-			$('.pagination-item').css('pointer-events', 'auto');
+			// $('.pagination-item').css('pointer-events', 'auto');
 		});
 	});
 
@@ -316,4 +316,13 @@ $(document).ready(function(){
 
 		$('.input-file-label').text(temp);
 	});
+
+	//Фокус в форме
+	$('.form-main-contain-form-input__input, .form-main-contain-form-input__textarea').focus(function(){
+		$(this).siblings('.form-main-contain-form-input__placeholder').css('color', '#3968AC');
+	});
+	$('.form-main-contain-form-input__input, .form-main-contain-form-input__textarea').blur(function(){
+		$(this).siblings('.form-main-contain-form-input__placeholder').css('color', '#b8b8b8');
+	});
+
 });

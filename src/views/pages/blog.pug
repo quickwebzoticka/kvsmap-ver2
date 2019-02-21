@@ -1,0 +1,237 @@
+extends ../template
+
+block title
+	title Blog
+
+block contain
+	.block
+		.block-head Блог
+			a.btn-back(href="main.html")
+				<svg width="44" height="8" viewBox="0 0 44 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0.646446 3.64645C0.451183 3.84171 0.451183 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM44 3.5L1 3.5V4.5L44 4.5V3.5Z" fill="black"/>
+				</svg>
+				| Назад
+		.block-content.blog
+			.blog-row
+				.blog-item.blog-item_wide
+					.blog-item-left
+						.blog-item-left-head Дизайн
+						.blog-item-left-big Развитие дизайна #[br] в 2019 году
+						.blog-item-left-btn
+							a.btn-look(href="blog-item.html") Смотреть полностью
+						.blog-item-left-bottom
+							.slider-card-3-author
+								img(src="img/slider-author.png")
+							.timestamp.timestamp_white
+								<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="white"></path>
+								</svg>
+								| Время чтения: 5 минут
+					.blog-item-right
+						img(src="img/blog-item_wide-img.png")
+
+				.blog-item
+					.slider-card-3
+						.slider-card-3-track(style="transform: translateY(0)")
+							.slider-card-3-item.active
+								.timestamp.timestamp_white
+									<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="white"/>
+									</svg>
+									| 3 Января 2018 года
+								.slider-card-3-text А тут у нас тоже идет текст новости или ее заголовок
+								.slider-card-3-btn
+									a.btn-look(href="blog-item.html") Смотреть полностью
+								.slider-card-3-timeread
+								.timestamp.timestamp_white
+									<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="white"></path>
+									</svg>
+									| Время чтения: 5 минут
+								.slider-card-3-author
+									img(src="img/slider-author.png")
+									| Tony Hawk
+			.blog-row
+				.blog-item
+					.slider-card-3
+						.slider-card-3-track(style="transform: translateY(0)").slider-card-3-track__green
+							.slider-card-3-item.active
+								.timestamp.timestamp_white
+									<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="white"/>
+									</svg>
+									| 3 Января 2018 года
+								.slider-card-3-text А тут у нас тоже идет текст новости или ее заголовок
+								.slider-card-3-btn
+									a.btn-look(href="blog-item.html") Смотреть полностью
+								.slider-card-3-timeread
+								.timestamp.timestamp_white
+									<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="white"></path>
+									</svg>
+									| Время чтения: 5 минут
+								.slider-card-3-author
+									img(src="img/slider-author.png")
+									| Tony Hawk
+				.blog-item
+					.slider-card
+						.slider-card-img-wrapper
+							.slider-card-img-track(style="transform: translateY(0)")
+								.slider-card-img.active
+									.slider-card-img__tooltip Cайты
+									img(src="img/slider-1-1.png")
+						.slider-card-text.active Тут будет краткое описание новости
+						.slider-card-custom-row
+							a.btn-look.btn-look_grey(href="blog-item.html") Смотреть полностью
+							.slider-card-3-author.slider-card-3-author_black-text
+								img(src="img/slider-author.png")
+								| Tony Stark
+						.slider-card-footer
+							.timestamp-wrapper.active
+								.timestamp
+									<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="#B9BED1"></path>
+									</svg>
+									| Время чтения: 5 минут
+				.blog-item.blog-item_flex-all
+					.slider-card-2
+						.slider-card-2-side.slider-card-2-side_text
+							.slider-card-2-side-head
+								.slider-card-2-side-head-track(style="transform: translateY(0)")
+									.slider-card-2-side-head-wrapper.active
+										| USER EXPERIENCE DESIGN
+							.slider-card-2-side-text
+								.slider-card-2-side-text-wrapper.active Здесь идет текст выводимой новости
+							.slider-card-2-side-btn
+								a.btn-look.btn-look_grey(href="blog-item.html") Смотреть полностью
+							.slider-card-2-side-footer
+								.slider-card-3-author.slider-card-3-author_black-text
+									img(src="img/slider-author.png")
+									| Tony Stark
+								.timestamp-wrapper.active
+									.timestamp
+										<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="#B9BED1"></path>
+										</svg>
+										| Время чтения: 5 минут
+						.slider-card-2-side.slider-card-2-side_img
+							.slider-card-2-side-img-wrapper.active
+								.slider-card-2-side-img
+									img(src="img/slider-2-1.png")
+					.slider-card-2
+						.slider-card-2-side.slider-card-2-side_text
+							.slider-card-2-side-head
+								.slider-card-2-side-head-track(style="transform: translateY(0)")
+									.slider-card-2-side-head-wrapper.active
+										| USER EXPERIENCE DESIGN
+							.slider-card-2-side-text
+								.slider-card-2-side-text-wrapper.active Здесь идет текст выводмой новости
+							.slider-card-2-side-btn
+								a.btn-look.btn-look_grey(href="blog-item.html") Смотреть полностью
+							.slider-card-2-side-footer
+								.slider-card-3-author.slider-card-3-author_black-text
+									img(src="img/slider-author.png")
+									| Tony Stark
+								.timestamp-wrapper.active
+									.timestamp
+										<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="#B9BED1"></path>
+										</svg>
+										| Время чтения: 5 минут
+						.slider-card-2-side.slider-card-2-side_img
+							.slider-card-2-side-img-wrapper.active
+								.slider-card-2-side-img
+									img(src="img/slider-2-1.png")
+	.block.blog.blog_mod
+		.block-head Популярное
+		.blog-row.blog-row_reverse
+			.blog-item
+				.slider-card-3
+					.slider-card-3-track(style="transform: translateY(0)").slider-card-3-track__blue
+						.slider-card-3-item.active
+							.timestamp.timestamp_white
+								<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="white"/>
+								</svg>
+								| 3 Января 2018 года
+							.slider-card-3-text А тут у нас тоже идет текст новости или ее заголовок
+							.slider-card-3-btn
+								a.btn-look(href="blog-item.html") Смотреть полностью
+							.slider-card-3-timeread
+							.timestamp.timestamp_white
+								<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="white"></path>
+								</svg>
+								| Время чтения: 5 минут
+							.slider-card-3-author
+								img(src="img/slider-author.png")
+								| Tony Hawk
+			.blog-item
+				.slider-card
+					.slider-card-img-wrapper
+						.slider-card-img-track(style="transform: translateY(0)")
+							.slider-card-img.active
+								.slider-card-img__tooltip Cайты
+								img(src="img/slider-1-1.png")
+					.slider-card-text.active Тут будет краткое описание новости
+					.slider-card-custom-row
+						a.btn-look.btn-look_grey(href="blog-item.html") Смотреть полностью
+						.slider-card-3-author.slider-card-3-author_black-text
+							img(src="img/slider-author.png")
+							| Tony Stark
+					.slider-card-footer
+						.timestamp-wrapper.active
+							.timestamp
+								<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="#B9BED1"></path>
+								</svg>
+								| Время чтения: 5 минут
+			.blog-item.blog-item_flex-all
+				.slider-card-2
+					.slider-card-2-side.slider-card-2-side_text
+						.slider-card-2-side-head
+							.slider-card-2-side-head-track(style="transform: translateY(0)")
+								.slider-card-2-side-head-wrapper.active
+									| USER EXPERIENCE DESIGN
+						.slider-card-2-side-text
+							.slider-card-2-side-text-wrapper.active Здесь идет текст выводимой новости
+						.slider-card-2-side-btn
+							a.btn-look.btn-look_grey(href="blog-item.html") Смотреть полностью
+						.slider-card-2-side-footer
+							.slider-card-3-author.slider-card-3-author_black-text
+								img(src="img/slider-author.png")
+								| Tony Stark
+							.timestamp-wrapper.active
+								.timestamp
+									<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="#B9BED1"></path>
+									</svg>
+									| Время чтения: 5 минут
+					.slider-card-2-side.slider-card-2-side_img
+						.slider-card-2-side-img-wrapper.active
+							.slider-card-2-side-img
+								img(src="img/slider-2-1.png")
+				.slider-card-2
+					.slider-card-2-side.slider-card-2-side_text
+						.slider-card-2-side-head
+							.slider-card-2-side-head-track(style="transform: translateY(0)")
+								.slider-card-2-side-head-wrapper.active
+									| USER EXPERIENCE DESIGN
+						.slider-card-2-side-text
+							.slider-card-2-side-text-wrapper.active Здесь идет текст выводмой новости
+						.slider-card-2-side-btn
+							a.btn-look.btn-look_grey(href="blog-item.html") Смотреть полностью
+						.slider-card-2-side-footer
+							.slider-card-3-author.slider-card-3-author_black-text
+								img(src="img/slider-author.png")
+								| Tony Stark
+							.timestamp-wrapper.active
+								.timestamp
+									<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M9.19744 8.55551L7.14145 7.31751C6.84945 7.14251 6.71045 6.80251 6.75945 6.47551V4.33351C6.75945 3.93351 7.08245 3.61051 7.48145 3.61051C7.88045 3.61051 8.20444 3.93351 8.20444 4.33351V6.05151L9.98944 7.12651C10.3674 7.35351 10.4974 7.85951 10.2784 8.25351C10.0604 8.64851 9.57645 8.78351 9.19744 8.55551ZM7.48145 1.44451C4.68945 1.44451 2.42645 3.70751 2.42645 6.49951C2.42645 9.29151 4.68945 11.5555 7.48145 11.5555C10.2734 11.5555 12.5374 9.29151 12.5374 6.49951C12.5374 3.70751 10.2734 1.44451 7.48145 1.44451ZM7.48145 12.9995C3.89245 12.9995 0.981445 10.0895 0.981445 6.49951C0.981445 2.90951 3.89245 -0.000488281 7.48145 -0.000488281C11.0714 -0.000488281 13.9814 2.90951 13.9814 6.49951C13.9814 10.0895 11.0714 12.9995 7.48145 12.9995Z" fill="#B9BED1"></path>
+									</svg>
+									| Время чтения: 5 минут
+					.slider-card-2-side.slider-card-2-side_img
+						.slider-card-2-side-img-wrapper.active
+							.slider-card-2-side-img
+								img(src="img/slider-2-1.png")
