@@ -325,4 +325,16 @@ $(document).ready(function(){
 		$(this).siblings('.form-main-contain-form-input__placeholder').css('color', '#b8b8b8');
 	});
 
+	//Открытие аккордеона
+
+	$(document).on('click', '.accordion-item-head', function(){
+		$(this).closest('.accordion-item').toggleClass('active');
+
+		$(this).closest('.accordion-item').siblings().removeClass('active');
+
+		$(this).siblings('.accordion-item-main').slideToggle(300);
+
+		$(this).closest('.accordion-item').siblings().find('.accordion-item-main').slideUp(300);
+	});
+
 });
