@@ -4,18 +4,16 @@ html(lang="en")
 		meta(charset="utf-8")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 		meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
-		link(rel="shortcut icon" href="../img/favicons/favicon.ico" type="image/x-icon")
-		link(rel="stylesheet" href="../styles/main.css")
+		link(rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon")
+		link(rel="stylesheet" href="styles/main.css")
 		block title
 	body
 		.wrapper
-			include components/header.pug
-			include components/socials.pug
-
 			block contain
-
-			include components/footer.pug
-
-		script(src="../js/jquery.min.js")
-		script(src="../js/jquery.scrollify.js")
-		script(src="../js/main.js")
+		
+		//-My
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkB9OwexEKh5lsRMBZyx6PqvJ6z-_RtY0")
+		//- KVS
+		//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFxUlg8FXWqH4pvAng4WDiyqnlOo7hkdI")
+		script(src="js/jquery.min.js")
+		script(src="js/main.js")
