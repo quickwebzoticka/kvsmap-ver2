@@ -525,7 +525,7 @@ $(function() {
             },
             {
               featureType: 'road.local',
-              elementType: 'geometry',
+              elementType: 'geometry.fill',
               stylers: [{color: '#a0561e'}]
             },
             {
