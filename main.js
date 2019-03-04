@@ -10,6 +10,11 @@ function update_all(limiter) {
     acc(limiter);
     scroll(limiter);
 }
+
+$(document).on('click', '[data-tab-link]', function(e){
+    e.preventDefault();
+});
+
 $(document).ready(function(){
     update_all();
     $('.first-slider-item__title span').addClass('active');

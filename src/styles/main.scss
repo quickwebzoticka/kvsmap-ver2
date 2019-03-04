@@ -116,8 +116,9 @@ html, body {
     margin-bottom: 20px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    white-space: nowrap;
     @media screen and (max-width: 768px) {
-        margin-bottom: 5px;
+        margin-bottom: 15px;
     }
     span {
         font-size: 12px;
@@ -132,7 +133,11 @@ html, body {
     &_all {
         height: 45px;
         justify-content: center;
+        height: 0px;
+        overflow: hidden;
+        transition: 0s;
         @media screen and (max-width: 768px) {
+            height: auto;
             order: -1;
             justify-content: flex-start;
             margin-bottom: 20px !important;
@@ -146,5 +151,11 @@ html, body {
         img {
             margin-right: 30px;
         }
+    }
+}
+
+.gm-style-iw.gm-style-iw-c {
+    button {
+        display: none !important;
     }
 }
